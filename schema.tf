@@ -13,11 +13,3 @@
 #         EOF
 #     }
 # }
-
-resource "aws_route53_record" "www" {
-  zone_id = Z0547409165EGAKUG3EH3
-  name    = "mysql-${var.ENV}.roboshopping"
-  type    = "A"
-  ttl     = 300
-  records = [aws_db_instance.mysql.address]
-}
