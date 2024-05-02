@@ -1,6 +1,6 @@
 resource "aws_route53_record" "mysql" {
-  zone_id = data.terraform_remote_state.vpc.outputs.PRIVATE_HOSTEDZONE_ID
-  name    = "mysql-${var.ENV}.${data.terraform_remote_state.vpc.outputs.PRIVATE_HOSTEDZONE_NAME}"
+  zone_id = "Z0547409165EGAKUG3EH3"
+  name    = "mysql-${var.ENV}.roboshopshopping"
   type    = "CNAME"
   ttl     = 10
   records = [aws_db_instance.mysql.address]
